@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # react-responsive-spacer
 
 ## Information
