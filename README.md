@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # react-responsive-spacer
 
 ## Information
@@ -132,3 +133,6 @@ Using the default breakpoint values sm={45} translates to:
 ### Have fun
 
 That's it! Now you can create space between your components specific to breakpoints.
+=======
+# React Responsive Spacer
+>>>>>>> 77aa7a47cf660dd769f94a4049a84d54e1c7d5ae
