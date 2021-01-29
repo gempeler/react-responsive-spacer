@@ -2,21 +2,6 @@
 
 ## Information
 
-<table>
-<tr>
-<td>Package</td><td>react-responsive-spacer</td>
-</tr>
-<tr>
-<td>Description</td>
-<td>React spacer component for responsive design</td>
-</tr>
-<tr>
-<td>Browser Version</td>
-<td>>= IE11*</td>
-</tr>
-</tr>
-</table>
-
 A simple and easy way to add space between react components
 
 ## Install
