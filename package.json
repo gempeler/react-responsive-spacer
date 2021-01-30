@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-m": "microbundle",
+    "build-m": "microbundle --jsx",
     "dev-m": "microbundle watch"
   },
   "eslintConfig": {
