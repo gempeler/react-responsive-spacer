@@ -6,7 +6,7 @@
   "module": "dist/react-responsive-spacer.module.js",
   "unpkg": "dist/react-responsive-spacer.umd.js",
   "version": "1.0.9",
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gempeler/react-responsive-spacer.git"
