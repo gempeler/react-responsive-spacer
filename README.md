@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# react-responsive-spacer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Information
 
-## Available Scripts
+A simple and easy way to add space between react components
 
-In the project directory, you can run:
+## Install
 
-### `yarn start`
+```console
+$ npm install react-responsive-spacer --save
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Example Usage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Basic Usage
 
-### `yarn test`
+This is the basic way to use this module
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
+import React from "react";
+import { YSpacer } from "react-responsive-spacer";
 
-### `yarn build`
+function App() {
+  return (
+    <div>
+      <YSpacer mb={30}></YSpacer>
+      <div>Hello</div>
+      <YSpacer mb={30} md={50} xxl={100}></YSpacer>
+      <div>What's Up ?</div>
+      <div style={{ display: "flex" }}>
+        <span>First</span>
+        <XSpacer mb={24} md={100}></XSpacer>
+        <span>Second</span>
+      </div>
+    </div>
+  );
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+export default App;
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### With SpaceProvider
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can also pass `breakpoints` to the YSpace and XSpace components through a React [Context](https://reactjs.org/docs/context.html).
 
-### `yarn eject`
+```jsx
+import { YSpacer, XSpacer, SpacerProvider } from "react-responsive-spacer";
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+function App() {
+  const breakpoints = {
+    mb: "0px",
+    sm: "600px",
+    md: "700px",
+    lg: "800px",
+    xl: "900px",
+    xxl: "1000px",
+  };
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  return (
+    <SpacerProvider breakpoints={breakpoints}>
+      <div>
+        <YSpacer mb={30}></YSpacer>
+        <div>HALLO</div>
+        <YSpacer mb={30} xxl={100}></YSpacer>
+        <div>Wie geht's?</div>
+        <div style={{ display: "flex" }}>
+          <span>First</span>
+          <XSpacer mb={24} md={100}></XSpacer>
+          <span>Second</span>
+        </div>
+      </div>
+    </SpacerProvider>
+  );
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+export default App;
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## API
 
-## Learn More
+### Properties
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For every breakpoint you can pass a value
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```jsx
+<YSpacer mb={30} sm={45} md={80} lg={90} xl={100} xxl={110}></YSpacer>
+```
 
-### Code Splitting
+Values are the space in Pixel. mb={30} will become `'30px'`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Breakpoints are defined using minWidth.
 
-### Analyzing the Bundle Size
+The default values for the breakpoints are:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```jsx
+const defaultBreakpoints = {
+  mb: "0px",
+  sm: "420px",
+  md: "768px",
+  lg: "1024px",
+  xl: "1366px",
+  xxl: "1440px",
+};
+```
 
-### Making a Progressive Web App
+Using the default breakpoint values sm={45} translates to:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```jsx
 
-### Advanced Configuration
+@media only screen (min-width: 420px){
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+...
 
-### Deployment
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Have fun
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+That's it! Now you can create space between your components specific to breakpoints.
