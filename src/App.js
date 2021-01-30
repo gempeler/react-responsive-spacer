@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { YSpacer, SpacerProvider } from "./library";
 
 function App() {
+  const defaultBreakpoints = {
+    mb: "0px",
+    sm: "500px",
+    md: "900px",
+    lg: "1024px",
+    xl: "1366px",
+    xxl: "1440px",
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <SpacerProvider breakpoints={defaultBreakpoints}>
+        <div>Hallo</div>
+        <YSpacer mb={50} sm={100} md={200}></YSpacer>
+        <div>Welt</div>
+      </SpacerProvider>
     </div>
   );
 }

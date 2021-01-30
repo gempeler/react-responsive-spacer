@@ -1,0 +1,6 @@
+import i,{useContext as m}from"react";import t from"styled-components";import{useMediaQuery as x}from"react-responsive";let r,e,d=i=>i;const n=t.div(r||(r=d`
+  height: ${0};
+`),i=>i.y+"px"),l=t.div(e||(e=d`
+  width: ${0};
+`),i=>i.x+"px"),y={mb:"0px",sm:"420px",md:"768px",lg:"1024px",xl:"1366px",xxl:"1440px"},u=i.createContext(y),o=({children:i,breakpoints:m=y})=>h(u.Provider,{value:m},i),p=({mb:i=0,sm:t=i,md:r=t,lg:e=r,xl:d=e,xxl:l=d})=>{const y=m(u),o=x({query:`(min-width: ${y.mb})`}),p=x({query:`(min-width: ${y.sm})`}),$=x({query:`(min-width: ${y.md})`}),s=x({query:`(min-width: ${y.lg})`}),w=x({query:`(min-width: ${y.xl})`});return x({query:`(min-width: ${y.xxl})`})?h(n,{y:l}):w?h(n,{y:d}):s?h(n,{y:e}):$?h(n,{y:r}):p?h(n,{y:t}):o?h(n,{y:i}):h("div",null)},$=({mb:i=0,sm:t=i,md:r=t,lg:e=r,xl:d=e,xxl:n=d})=>{const y=m(u),o=x({query:`(min-width: ${y.mb})`}),p=x({query:`(min-width: ${y.sm})`}),$=x({query:`(min-width: ${y.md})`}),s=x({query:`(min-width: ${y.lg})`}),w=x({query:`(min-width: ${y.xl})`});return x({query:`(min-width: ${y.xxl})`})?h(l,{x:n}):w?h(l,{x:d}):s?h(l,{x:e}):$?h(l,{x:r}):p?h(l,{x:t}):o?h(l,{x:i}):h("div",null)};export{o as SpacerProvider,u as SpacerStateContext,$ as XSpacer,p as YSpacer};
+//# sourceMappingURL=react-responsive-spacer-v2.modern.js.map
