@@ -6,11 +6,18 @@
   "module": "dist/react-responsive-spacer.module.js",
   "unpkg": "dist/react-responsive-spacer.umd.js",
   "version": "1.0.14",
+  "description": "A simple and easy way to add space between react components",
   "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gempeler/react-responsive-spacer.git"
   },
+  "keywords": [
+    "react",
+    "spacer",
+    "responsive",
+    "layout"
+  ],
   "bugs": {
     "url": "https://github.com/gempeler/react-responsive-spacer/issues"
   },
