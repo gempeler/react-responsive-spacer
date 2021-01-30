@@ -1,10 +1,10 @@
 {
-  "name": "react-responsive-spacer-v2",
+  "name": "react-responsive-spacer",
   "source": "src/library/index.js",
-  "main": "dist/react-responsive-spacer-v2.js",
-  "exports": "dist/react-responsive-spacer-v2.modern.js",
-  "module": "dist/react-responsive-spacer-v2.module.js",
-  "unpkg": "dist/react-responsive-spacer-v2.umd.js",
+  "main": "dist/react-responsive-spacer.js",
+  "exports": "dist/react-responsive-spacer.modern.js",
+  "module": "dist/react-responsive-spacer.module.js",
+  "unpkg": "dist/react-responsive-spacer.umd.js",
   "version": "1.0.9",
   "private": true,
   "repository": {
