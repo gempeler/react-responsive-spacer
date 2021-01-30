@@ -5,7 +5,7 @@
   "exports": "dist/react-responsive-spacer-v2.modern.js",
   "module": "dist/react-responsive-spacer-v2.module.js",
   "unpkg": "dist/react-responsive-spacer-v2.umd.js",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": true,
   "repository": {
     "type": "git",
